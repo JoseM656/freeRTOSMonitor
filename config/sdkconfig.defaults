@@ -1,0 +1,4 @@
+# You must have this configuration in this file or in other sdkconfig.defaults
+CONFIG_FREERTOS_USE_TRACE_FACILITY=y
+CONFIG_FREERTOS_USE_STATS_FORMATTING_FUNCTIONS=y
+CONFIG_FREERTOS_GENERATE_RUN_TIME_STATS=y

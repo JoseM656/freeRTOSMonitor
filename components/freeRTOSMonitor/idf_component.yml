@@ -1,0 +1,3 @@
+name: freeRTOSMonitor
+version: "1.0.0"
+description: FreeRTOS runtime monitor snapshot library
