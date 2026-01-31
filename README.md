@@ -44,14 +44,13 @@ If you are using ESP-IDF, you aslo can activate it using:
 
 ```
  idf.py menuconfig
- 
 ```
 
 
 **Component config -->  FreeRTOS -->  Kernel -->  configUSE_TRACE_FACILITY / Enable display of xCoreID in vTaskList** 
 
 
-###  Functions you can use
+##  Functions you can use
 
 
 ####  Uptime
