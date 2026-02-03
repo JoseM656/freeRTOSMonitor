@@ -16,7 +16,7 @@
 static void freeRTOSMonitorSnapshotALLInternal(void);
 static void freeRTOSMonitorSnapshotUptimeInternal(void);
 static void freeRTOSMonitorSnapshotHeapInternal(void);
-static void freeRTOSMonitorSnapshotScheluderInternal(void);
+static void freeRTOSMonitorSnapshotSchedulerInternal(void);
 static void freeRTOSMonitorSnapshotCpuInternal(void);
 
 
@@ -46,7 +46,7 @@ void freeRTOSMonitorSnapshotHeap(void)
 /*A small function that takes a snapshot of the scheduler.*/
 void freeRTOSMonitorSnapshotScheduler(void)
 {
-    freeRTOSMonitorSnapshotScheluderInternal();
+    freeRTOSMonitorSnapshotSchedulerInternal();
 }
 
 /*Use system functions to calculate CPU usage.*/
@@ -94,7 +94,7 @@ static void freeRTOSMonitorSnapshotHeapInternal(void) {
 
 
 /*A small function that takes a snapshot of the scheduler.*/
-static void freeRTOSMonitorSnapshotScheluderInternal(void) {
+static void freeRTOSMonitorSnapshotSchedulerInternal(void) {
 
     /*Adjust the buffer according to the number of tasks*/
     size_t buf_size = uxTaskGetNumberOfTasks() * 80;

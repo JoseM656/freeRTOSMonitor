@@ -1,2 +1,3 @@
-idf_component_register(SRCS "monitor.c" "dumpTask.c"
-                    INCLUDE_DIRS ".")
+idf_component_register(SRCS "dumpTask.c"
+                    INCLUDE_DIRS "."
+                    REQUIRES freeRTOSMonitor) 
