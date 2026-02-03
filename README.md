@@ -84,7 +84,7 @@ Via UART:
 It displays two messages showing the total heap, how much is used, its percentage, and how much is available.
 
 
-####  Scheluder
+####  Scheduler
 
 ```c
 void freeRTOSMonitorSnapshotScheduler(void);

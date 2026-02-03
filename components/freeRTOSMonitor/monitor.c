@@ -64,7 +64,7 @@ static void freeRTOSMonitorSnapshotALLInternal(void) {
 
     freeRTOSMonitorSnapshotUptimeInternal();
     freeRTOSMonitorSnapshotHeapInternal();
-    freeRTOSMonitorSnapshotScheluderInternal();
+    freeRTOSMonitorSnapshotSchedulerInternal();
     freeRTOSMonitorSnapshotCpuInternal();
  
     
