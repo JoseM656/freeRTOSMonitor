@@ -49,6 +49,29 @@ If you are using ESP-IDF, you aslo can activate it using:
 
 **Component config -->  FreeRTOS -->  Kernel -->  configUSE_TRACE_FACILITY / Enable display of xCoreID in vTaskList** 
 
+---
+
+##  How to use
+
+###  Option 1: Copy to your project
+
+1. Copy the `components/freeRTOSMonitor` folder into your project's `components/` directory
+2. Add to your main component:
+```cmake
+   idf_component_register(SRCS "main.c"
+                       REQUIRES freeRTOSMonitor)
+```
+3. Include the header:
+```c
+   #include "monitor.h"
+```
+
+### Option 2: ESP Component Registry (coming soon)
+```bash
+idf.py add-dependency "freeRTOSMonitor"
+```
+
+---
 
 ##  Functions you can use
 
@@ -132,7 +155,6 @@ High CPU usage reported by IDLE tasks (e.g. ~99%) is normal in FreeRTOS.
 IDLE tasks represent unused CPU time, so a high percentage means the system is mostly idle and application tasks are either blocked or waiting.
 When system load increases, the CPU percentage of IDLE tasks decreases accordingly.
 
-
 ####  ALL
 
 ```c
@@ -141,6 +163,7 @@ void freeRTOSMonitorSnapshotAll(void);
 
 Displays all reading parameters in order (As in the example at the beginning.)
 
+---
 
 ####  To conclude
 
